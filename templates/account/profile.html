@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+</head>
+<body>
+    <img src="{{request.user.profile.image.url}}" alt="">
+    <h1>Welcome {{request.user.username}} </h1>
+    <form method="POST" enctype="multipart/form_data">{% csrf_token %}
+    {{uform.as_p}}
+    {{pform.as_p}}
+    <button type="submit">Update Profile</button>
+    </form>
+</body>
+</html>
