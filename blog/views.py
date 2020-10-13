@@ -61,7 +61,7 @@ def contact(request):
 		mess = request.POST.get('mess','default')
 
 		Contact(name=name,email=email,mobile=mob,message=mess).save()
-	return render(request, 'contact.html',parms)
+	return render(request, 'contact.html')
 
     
 
